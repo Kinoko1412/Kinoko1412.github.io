@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>隨機配對參賽者</title>
+    <style>
+        body {
+            background-image: url('BG.png');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        textarea {
+            width: 300px;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+        .results {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <textarea id="participants" placeholder="請輸入參賽者名單，每行一位參賽者..."></textarea><br>
+        <button onclick="randomPair()">Go!!!</button>
+        <div class="results" id="results"></div>
+    </div>
+
+    <script>
+        function randomPair() {
+            const participants = document.getElementById("participants").value.split('\n');
+            const resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = '';
+
+            // 隨機打亂參賽者名單
+            for (let i = participants.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [participants[i], participants[j]] = [participants[j], participants[i]];
+            }
+
+            // 配對參賽者並顯示結果
+            for (let i = 0; i < participants.length; i += 2) {
+                if (i + 1 < participants.length) {
+                    resultsDiv.innerHTML += `<p>${participants[i]} vs ${participants[i + 1]}</p>`;
+                } else {
+                    resultsDiv.innerHTML += `<p>${participants[i]} 無對手</p>`;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
