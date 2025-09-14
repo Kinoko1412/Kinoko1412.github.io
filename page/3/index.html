@@ -1,0 +1,293 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Kinoko工作室 - Kinoko的旅行日記</title><meta name="author" content="Kinoko"><meta name="copyright" content="Kinoko"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="hi~">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kinoko工作室">
+<meta property="og:url" content="https://kinoko1412.github.io/page/3/index.html">
+<meta property="og:site_name" content="Kinoko工作室">
+<meta property="og:description" content="hi~">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://kinoko1412.github.io/img/avatar.png">
+<meta property="article:author" content="Kinoko">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kinoko1412.github.io/img/avatar.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://kinoko1412.github.io/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Kinoko工作室',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/banner.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Kinoko工作室</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div></div></nav><div id="site-info"><h1 id="site-title">Kinoko工作室</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Kinoko1412" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://www.instagram.com/leaf_kinoko/" target="_blank" title="Instagram"><i class="fab fa-instagram" style="color: #E4405F;"></i></a><a class="social-icon" href="https://www.facebook.com/ye.shi.kai.226202/" target="_blank" title="Facebook"><i class="fab fa-facebook" style="color: #1877F2;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/03/20/%E7%94%9F%E7%89%A9%E7%AD%86%E8%A8%98/" title="生物筆記">生物筆記</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-03-19T16:00:00.000Z" title="Created 2023-03-20 00:00:00">2023-03-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="disqus-count" href="https://kinoko1412.github.io/2023/03/20/%E7%94%9F%E7%89%A9%E7%AD%86%E8%A8%98/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> comments</span></span></div><div class="content"> 高一  1-1.1顯微鏡發明  虎克改良顯微鏡 並非發明   細胞為構成生物體的基本構造   + 肉眼可見的細胞有     * 像是雞蛋、鮭魚卵等 + 肉眼不可見的細胞有     * 像是紅血球、白血球等 2. 細胞發現 + *虎克*發表了 `微物圖誌`-1665  	* 將顯微鏡下觀察到的軟木塞切片的蜂窩狀小室稱為**細胞** + 後續的*雷文霍克*改良了顯微鏡-1673     * 看到了更小的**細菌** + *布朗*觀察植物細胞-1831     * 發現**細胞核** + *許旺*,*許來登*-1839     * 提出**細胞學說** + *魏修*-1855     * 提出**所有細胞均來自已存在的細胞** + 統整***細胞學說*** 	1.生物體皆由細胞組成 	2.細胞微生物體構造及功能的單位 	3.所有細胞均由已經存在的細胞所產生--*魏修*   1-2[真核細胞構造]     1.細胞膜  1.1醣類-辨識(如A型血,B型血) 1.2蛋白質-控制物質進出\催化化學反應\接收外來訊息 1.3磷酯-親水向外,疏水向內 1.4固醇類-穩固細胞膜穩定st=>sta...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/horse1.gif'" alt="avatar"/></div><div class="author-info-name">Kinoko</div><div class="author-info-description">hi~</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Kinoko1412"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Kinoko1412" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://www.instagram.com/leaf_kinoko/" target="_blank" title="Instagram"><i class="fab fa-instagram" style="color: #E4405F;"></i></a><a class="social-icon" href="https://www.facebook.com/ye.shi.kai.226202/" target="_blank" title="Facebook"><i class="fab fa-facebook" style="color: #1877F2;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/13/Unity-class-1/" title="UNity class 1">UNity class 1</a><time datetime="2025-09-13T08:32:13.000Z" title="Created 2025-09-13 16:32:13">2025-09-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/10/ACGN%E6%97%A5%E6%9C%AC%E6%AC%A1%E6%96%87%E5%8C%96%E7%A0%94%E7%A9%B6%E7%A4%BE-%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E6%B0%B8%E4%B8%8D%E5%81%9C%E6%AD%A2%E7%9A%84%E6%97%85%E9%80%94-%E7%AC%AC0~1%E7%AB%A0/" title="ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途-上學期">ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途-上學期</a><time datetime="2024-07-10T10:17:58.000Z" title="Created 2024-07-10 18:17:58">2024-07-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/02/Onshape-%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B%E7%9A%84%E4%BD%BF%E7%94%A8%E6%97%A5%E8%AA%8C/" title="Onshape-從零開始的使用日誌">Onshape-從零開始的使用日誌</a><time datetime="2024-07-02T06:16:25.000Z" title="Created 2024-07-02 14:16:25">2024-07-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/23/ACGN%E6%97%A5%E6%9C%AC%E6%AC%A1%E6%96%87%E5%8C%96%E7%A0%94%E7%A9%B6%E7%A4%BE-%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E6%B0%B8%E4%B8%8D%E5%81%9C%E6%AD%A2%E7%9A%84%E6%97%85%E9%80%94/" title="ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途">ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途</a><time datetime="2024-06-23T13:37:44.000Z" title="Created 2024-06-23 21:37:44">2024-06-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/23/MindAR%E7%B0%A1%E7%95%A5%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F%E8%88%87%E5%BF%83%E5%BE%97/" title="MindAR簡略使用方式與心得">MindAR簡略使用方式與心得</a><time datetime="2024-06-23T13:35:07.000Z" title="Created 2024-06-23 21:35:07">2024-06-23</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/magics/"><span class="card-category-list-name">magics</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/math/"><span class="card-category-list-name">math</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/psysics/"><span class="card-category-list-name">psysics</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9B%B8%E8%A9%95/"><span class="card-category-list-name">書評</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%95%B0%E9%A3%9F%E4%BF%B1%E6%A8%82%E9%83%A8/"><span class="card-category-list-name">異食俱樂部</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E7%95%B0%E9%A3%9F%E4%BF%B1%E6%A8%82%E9%83%A8/" style="font-size: 1.23em; color: #999ea6">異食俱樂部</a> <a href="/tags/%E9%AD%94%E6%B3%95%E5%AD%B8%E7%BF%92%E6%97%A5%E8%AA%8C-Unity/" style="font-size: 1.1em; color: #999">魔法學習日誌 Unity</a> <a href="/tags/%E9%AB%98%E4%B8%AD%E5%AD%B8%E7%A7%91/" style="font-size: 1.5em; color: #99a9bf">高中學科</a> <a href="/tags/%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E5%A4%A7%E5%9C%B0%E5%B7%A1%E8%BF%B4/" style="font-size: 1.1em; color: #999">吟遊詩菇的大地巡迴</a> <a href="/tags/%E9%A6%99%E8%8F%87%E6%9B%B8%E8%A9%95/" style="font-size: 1.37em; color: #99a4b2">香菇書評</a> <a href="/tags/%E5%BB%A2%E8%A9%B1/" style="font-size: 1.1em; color: #999">廢話</a> <a href="/tags/%E9%AD%94%E6%B3%95%E5%AD%B8%E7%BF%92%E6%97%A5%E8%AA%8C/" style="font-size: 1.23em; color: #999ea6">魔法學習日誌</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/09/">
+            <span class="card-archive-list-date">
+              September 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/07/">
+            <span class="card-archive-list-date">
+              July 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/06/">
+            <span class="card-archive-list-date">
+              June 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/04/">
+            <span class="card-archive-list-date">
+              April 2024
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/03/">
+            <span class="card-archive-list-date">
+              March 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/01/">
+            <span class="card-archive-list-date">
+              January 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/03/">
+            <span class="card-archive-list-date">
+              March 2023
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">21</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-09-14T07:39:22.029Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By Kinoko</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 6.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const getCount = async () => {
+    try {
+      const eleGroup = document.querySelectorAll('#recent-posts .disqus-count')
+      const cleanedLinks = Array.from(eleGroup).map(i => `thread:link=${i.href.replace(/#post-comment$/, '')}`);
+
+      const res = await fetch(`https://disqus.com/api/3.0/threads/set.json?forum=kinoko1412&api_key=&${cleanedLinks.join('&')}`,{
+        method: 'GET'
+      })
+      const result = await res.json()
+
+      eleGroup.forEach(i => {
+        const cleanedLink = i.href.replace(/#post-comment$/, '')
+        const urlData = result.response.find(data => data.link === cleanedLink) || { posts: 0 }
+        i.textContent = urlData.posts
+      })
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  window.pjax ? getCount() : window.addEventListener('load', getCount)
+})()</script><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, 2))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = [].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":100},"mobile":{"show":true,"scale":0.7},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
