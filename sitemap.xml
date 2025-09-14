@@ -207,13 +207,6 @@
   </url>
   
   <url>
-    <loc>https://kinoko1412.github.io/tags/%E5%BB%A2%E8%A9%B1/</loc>
-    <lastmod>2025-09-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kinoko1412.github.io/tags/%E9%AD%94%E6%B3%95%E5%AD%B8%E7%BF%92%E6%97%A5%E8%AA%8C/</loc>
     <lastmod>2025-09-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -228,14 +221,21 @@
   </url>
   
   <url>
-    <loc>https://kinoko1412.github.io/tags/%E9%AB%98%E4%B8%AD%E5%AD%B8%E7%A7%91/</loc>
+    <loc>https://kinoko1412.github.io/tags/%E9%AD%94%E6%B3%95%E5%AD%B8%E7%BF%92%E6%97%A5%E8%AA%8C-Unity/</loc>
     <lastmod>2025-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://kinoko1412.github.io/tags/%E9%AD%94%E6%B3%95%E5%AD%B8%E7%BF%92%E6%97%A5%E8%AA%8C-Unity/</loc>
+    <loc>https://kinoko1412.github.io/tags/%E5%BB%A2%E8%A9%B1/</loc>
+    <lastmod>2025-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kinoko1412.github.io/tags/%E9%AB%98%E4%B8%AD%E5%AD%B8%E7%A7%91/</loc>
     <lastmod>2025-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
