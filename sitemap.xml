@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kinoko1412.github.io/2025/09/14/Principles-conclusion/</loc>
+    
+    <lastmod>2025-09-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kinoko1412.github.io/2025/09/13/Unity-class-1/</loc>
     
     <lastmod>2025-09-13</lastmod>
@@ -243,6 +252,13 @@
   
   <url>
     <loc>https://kinoko1412.github.io/tags/%E7%95%B0%E9%A3%9F%E4%BF%B1%E6%A8%82%E9%83%A8/</loc>
+    <lastmod>2025-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kinoko1412.github.io/tags/%E5%AF%A6%E7%94%A8/</loc>
     <lastmod>2025-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
