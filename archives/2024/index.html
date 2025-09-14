@@ -145,40 +145,16 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><style>#loading-box {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #0d1117;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
-    cursor: pointer;
-  }
-  #loading-box.loaded {
-    opacity: 0;
-    visibility: hidden;
-  }
-css-doodle {--color: @p(#51eaea, #fffde1, #ff9d76, #FB3569);--rule: (:doodle {@grid: 30x1 / 18vmin;--deg: @p(-180deg, 180deg);}:container {perspective: 30vmin;}:after, :before {content: '';background: var(--color); @place-cell: @r(100%) @r(100%); @size: @r(6px); @shape: heart;} @place-cell: center; @size: 100%;box-shadow: @m2(0 0 50px var(--color));background: @m100(radial-gradient(var(--color) 50%, transparent 0)@r(-20%, 120%) @r(-20%, 100%) / 1px 1px no-repeat); will-change: transform, opacity; animation: scale-up 12s linear infinite; animation-delay: calc(-12s / @I * @i); @keyframes scale-up { 0%, 95.01%, 100% {transform: translateZ(0) rotate(0);opacity: 0;}10% {opacity: 1;}95% {transform: translateZ(35vmin) rotateZ(@var(--deg));}})}</style><css-doodle use="var(--rule)"></css-doodle><script async="async" src="https://npm.elemecdn.com/css-doodle@0.15.3/css-doodle.min.js"><div class="loading-word">Loading...</div></script></div><script>(()=>{
-  const $loadingBox = document.getElementById('loading-box')
-  const $body = document.body
-  let startTime = Date.now()
-
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><!-- 模擬網站結構的載入動畫--><div class="template-preview"><div class="mock-doctype">HTML</div><div class="mock-html" data-theme="light"><div class="mock-head"><div class="mock-title">Kinoko工作室</div><div class="mock-meta-tags"><div class="meta-tag">og:title</div><div class="meta-tag">description</div><div class="meta-tag">viewport</div></div></div><div class="mock-body"><div class="mock-loading-indicator"><div class="spinner"></div></div><div class="mock-sidebar"></div><div class="mock-body-wrap"><div class="mock-header"><div class="mock-nav">Navigation</div></div><div class="mock-main-content"><div class="mock-content-block"></div><div class="mock-content-block"></div><div class="mock-aside"><div class="mock-widget"></div><div class="mock-widget"></div></div></div><div class="mock-footer"><div class="footer-content"></div></div></div></div></div></div><div class="loading-word">Loading...</div></div><script async="async">;(function(){
+  var $loadingBox = document.getElementById('loading-box')
+  var $body = document.body
   const preloader = {
     endLoading: () => {
       if ($loadingBox.classList.contains('loaded')) return
-
       $body.style.overflow = ''
       $loadingBox.classList.add('loaded')
     },
     initLoading: () => {
-      startTime = Date.now()
       $body.style.overflow = 'hidden'
       $loadingBox.classList.remove('loaded')
     }
@@ -186,24 +162,334 @@ css-doodle {--color: @p(#51eaea, #fffde1, #ff9d76, #FB3569);--rule: (:doodle {@g
 
   preloader.initLoading()
 
-  // 點擊事件監聽器
-  $loadingBox.addEventListener('click', preloader.endLoading)
+  if (document.readyState === 'complete') {
+    preloader.endLoading()
+  } else {
+    window.addEventListener('load', preloader.endLoading)
+    document.addEventListener('DOMContentLoaded', preloader.endLoading)
+    // Add timeout protection: force end after 7 seconds
+    setTimeout(preloader.endLoading, 7000)
+  }
 
-  // 7 秒後自動關閉
-  setTimeout(preloader.endLoading, 7000)
-
-  if (true) {
+  if (typeof btf !== 'undefined' && true) {
     btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
     btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
   }
-})()</script><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Kinoko工作室</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div></div></nav><div id="page-site-info"><h1 id="site-title">2024</h1></div></header><main class="layout" id="content-inner"><div id="archive"><div class="article-sort-title">All Articles - 15</div><div class="article-sort"><div class="article-sort-item year">2024</div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-07-10T10:17:58.000Z" title="Created 2024-07-10 18:17:58">2024-07-10</time></div><a class="article-sort-item-title" href="/2024/07/10/ACGN%E6%97%A5%E6%9C%AC%E6%AC%A1%E6%96%87%E5%8C%96%E7%A0%94%E7%A9%B6%E7%A4%BE-%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E6%B0%B8%E4%B8%8D%E5%81%9C%E6%AD%A2%E7%9A%84%E6%97%85%E9%80%94-%E7%AC%AC0~1%E7%AB%A0/" title="ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途-上學期">ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途-上學期</a></div></div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-07-02T06:16:25.000Z" title="Created 2024-07-02 14:16:25">2024-07-02</time></div><a class="article-sort-item-title" href="/2024/07/02/Onshape-%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B%E7%9A%84%E4%BD%BF%E7%94%A8%E6%97%A5%E8%AA%8C/" title="Onshape-從零開始的使用日誌">Onshape-從零開始的使用日誌</a></div></div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-06-23T13:37:44.000Z" title="Created 2024-06-23 21:37:44">2024-06-23</time></div><a class="article-sort-item-title" href="/2024/06/23/ACGN%E6%97%A5%E6%9C%AC%E6%AC%A1%E6%96%87%E5%8C%96%E7%A0%94%E7%A9%B6%E7%A4%BE-%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E6%B0%B8%E4%B8%8D%E5%81%9C%E6%AD%A2%E7%9A%84%E6%97%85%E9%80%94/" title="ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途">ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途</a></div></div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-06-23T13:35:07.000Z" title="Created 2024-06-23 21:35:07">2024-06-23</time></div><a class="article-sort-item-title" href="/2024/06/23/MindAR%E7%B0%A1%E7%95%A5%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F%E8%88%87%E5%BF%83%E5%BE%97/" title="MindAR簡略使用方式與心得">MindAR簡略使用方式與心得</a></div></div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-06-23T13:34:27.000Z" title="Created 2024-06-23 21:34:27">2024-06-23</time></div><a class="article-sort-item-title" href="/2024/06/23/Kinoko%E7%9A%84%E9%81%94%E7%88%BE%E6%96%87%E7%95%B0%E9%A3%9F%E4%BF%B1%E6%A8%82%E9%83%A8%E5%85%B6%E4%BA%8C-%E8%A5%BF%E8%8E%8E%E7%8B%97%E9%A3%BC%E6%96%99%E6%B2%99%E6%9C%97%E7%89%9B%E6%8E%92%E7%AF%87/" title="Kinoko的達爾文異食俱樂部其二-西莎狗飼料沙朗牛排篇">Kinoko的達爾文異食俱樂部其二-西莎狗飼料沙朗牛排篇</a></div></div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-04-10T14:53:39.000Z" title="Created 2024-04-10 22:53:39">2024-04-10</time></div><a class="article-sort-item-title" href="/2024/04/10/Kinoko%E7%9A%84%E9%81%94%E7%88%BE%E6%96%87%E7%95%B0%E9%A3%9F%E4%BF%B1%E6%A8%82%E9%83%A8/" title="Kinoko的達爾文異食俱樂部其一-10元魚飼料">Kinoko的達爾文異食俱樂部其一-10元魚飼料</a></div></div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-04-09T14:31:04.000Z" title="Created 2024-04-09 22:31:04">2024-04-09</time></div><a class="article-sort-item-title" href="/2024/04/09/%E9%AB%98%E4%B8%AD%E7%89%A9%E7%90%86%E7%AD%86%E8%A8%98-8-%E5%8A%9F%E8%88%87%E5%8A%9B%E5%AD%B8%E8%83%BD/" title="高中物理筆記-8-功與力學能">高中物理筆記-8-功與力學能</a></div></div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-04-06T03:31:35.000Z" title="Created 2024-04-06 11:31:35">2024-04-06</time></div><a class="article-sort-item-title" href="/2024/04/06/%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E7%AD%86%E8%A8%98-12-%E7%A9%BA%E9%96%93%E5%90%91%E9%87%8F/" title="高中數學筆記-12-空間向量">高中數學筆記-12-空間向量</a></div></div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-04-02T16:01:11.000Z" title="Created 2024-04-03 00:01:11">2024-04-03</time></div><a class="article-sort-item-title" href="/2024/04/03/%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E7%AD%86%E8%A8%98-11-%E5%B9%B3%E9%9D%A2%E5%90%91%E9%87%8F/" title="高中數學筆記-11 平面向量">高中數學筆記-11 平面向量</a></div></div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-04-02T15:59:22.000Z" title="Created 2024-04-02 23:59:22">2024-04-02</time></div><a class="article-sort-item-title" href="/2024/04/02/%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E7%AD%86%E8%A8%98-8-%E6%8C%87%E6%95%B8%E8%88%87%E5%B0%8D%E6%95%B8/" title="高中數學筆記-8 指數與對數">高中數學筆記-8 指數與對數</a></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/archives/2024/page/2/">2</a><a class="extend next" rel="next" href="/archives/2024/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/horse1.gif'" alt="avatar"/></div><div class="author-info-name">Kinoko</div><div class="author-info-description">hi~</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Kinoko1412"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Kinoko1412" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://www.instagram.com/leaf_kinoko/" target="_blank" title="Instagram"><i class="fab fa-instagram" style="color: #E4405F;"></i></a><a class="social-icon" href="https://www.facebook.com/ye.shi.kai.226202/" target="_blank" title="Facebook"><i class="fab fa-facebook" style="color: #1877F2;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/13/Unity-class-1/" title="UNity class 1">UNity class 1</a><time datetime="2025-09-13T08:32:13.000Z" title="Created 2025-09-13 16:32:13">2025-09-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/10/ACGN%E6%97%A5%E6%9C%AC%E6%AC%A1%E6%96%87%E5%8C%96%E7%A0%94%E7%A9%B6%E7%A4%BE-%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E6%B0%B8%E4%B8%8D%E5%81%9C%E6%AD%A2%E7%9A%84%E6%97%85%E9%80%94-%E7%AC%AC0~1%E7%AB%A0/" title="ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途-上學期">ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途-上學期</a><time datetime="2024-07-10T10:17:58.000Z" title="Created 2024-07-10 18:17:58">2024-07-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/02/Onshape-%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B%E7%9A%84%E4%BD%BF%E7%94%A8%E6%97%A5%E8%AA%8C/" title="Onshape-從零開始的使用日誌">Onshape-從零開始的使用日誌</a><time datetime="2024-07-02T06:16:25.000Z" title="Created 2024-07-02 14:16:25">2024-07-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/23/ACGN%E6%97%A5%E6%9C%AC%E6%AC%A1%E6%96%87%E5%8C%96%E7%A0%94%E7%A9%B6%E7%A4%BE-%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E6%B0%B8%E4%B8%8D%E5%81%9C%E6%AD%A2%E7%9A%84%E6%97%85%E9%80%94/" title="ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途">ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途</a><time datetime="2024-06-23T13:37:44.000Z" title="Created 2024-06-23 21:37:44">2024-06-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/23/MindAR%E7%B0%A1%E7%95%A5%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F%E8%88%87%E5%BF%83%E5%BE%97/" title="MindAR簡略使用方式與心得">MindAR簡略使用方式與心得</a><time datetime="2024-06-23T13:35:07.000Z" title="Created 2024-06-23 21:35:07">2024-06-23</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+})()
+</script><style>.template-preview {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin: 20px auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.mock-doctype {
+  background: #f8f9fa;
+  padding: 2px 8px;
+  font-size: 8px;
+  color: #666;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.mock-html {
+  height: calc(100% - 20px);
+  display: flex;
+  flex-direction: column;
+}
+
+.mock-head {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 8px;
+  color: white;
+  font-size: 10px;
+}
+
+.mock-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.mock-meta-tags {
+  display: flex;
+  gap: 4px;
+}
+
+.meta-tag {
+  background: rgba(255,255,255,0.2);
+  padding: 1px 4px;
+  border-radius: 2px;
+  font-size: 6px;
+}
+
+.mock-body {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.mock-loading-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.mock-sidebar {
+  width: 20%;
+  background: #f8f9fa;
+  border-right: 1px solid #e9ecef;
+}
+
+.mock-body-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.mock-header {
+  background: #343a40;
+  color: white;
+  padding: 4px 8px;
+  font-size: 8px;
+}
+
+.mock-main-content {
+  flex: 1;
+  display: flex;
+  padding: 8px;
+  gap: 8px;
+}
+
+.mock-content-block {
+  flex: 1;
+  background: #f8f9fa;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  height: 20px;
+  animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+.mock-aside {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mock-widget {
+  background: #e9ecef;
+  border-radius: 4px;
+  height: 15px;
+  animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+.mock-footer {
+  background: #6c757d;
+  color: white;
+  padding: 4px 8px;
+  font-size: 6px;
+  text-align: center;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+.loading-word {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #667eea;
+  font-weight: 500;
+}</style></div><!-- SVG 波浪背景動畫--><div id="animated-bg"><style>#animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+a-waves {
+  --x: -0.5rem;
+  --y: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+a-waves:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  transform: translate3d(calc(var(--x) - 50%), calc(var(--y) - 50%), 0);
+  will-change: transform;
+  content: "";
+}
+a-waves svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+a-waves svg path {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 1px;
+}</style><script>// 簡化的噪聲函數
+window.Noise = function(seed) {
+  this.seed = seed || Math.random();
+};
+window.Noise.prototype.perlin2 = function(x, y) {
+  return Math.sin(x * 0.1 + this.seed) * Math.cos(y * 0.1 + this.seed) * 0.5;
+};</script><a-waves><svg class="js-svg"></svg></a-waves><script>class AWaves extends HTMLElement {
+  connectedCallback() {
+    this.svg = this.querySelector('.js-svg');
+    this.mouse = { x: -10, y: 0, lx: 0, ly: 0, sx: 0, sy: 0, v: 0, vs: 0, a: 0, set: false };
+    this.lines = [];
+    this.paths = [];
+    this.noise = new Noise(Math.random());
+    this.setSize();
+    this.setLines();
+    this.bindEvents();
+    requestAnimationFrame(this.tick.bind(this));
+  }
+  bindEvents() {
+    window.addEventListener('resize', this.onResize.bind(this));
+    window.addEventListener('mousemove', this.onMouseMove.bind(this));
+    this.addEventListener('touchmove', this.onTouchMove.bind(this));
+  }
+  onResize() { this.setSize(); this.setLines(); }
+  onMouseMove(e) { this.updateMousePosition(e.pageX, e.pageY); }
+  onTouchMove(e) {
+    e.preventDefault();
+    const touch = e.touches[0];
+    this.updateMousePosition(touch.clientX, touch.clientY);
+  }
+  updateMousePosition(x, y) {
+    const { mouse } = this;
+    mouse.x = x - this.bounding.left;
+    mouse.y = y - this.bounding.top + window.scrollY;
+    if (!mouse.set) {
+      mouse.sx = mouse.x; mouse.sy = mouse.y; mouse.lx = mouse.x; mouse.ly = mouse.y; mouse.set = true;
+    }
+  }
+  setSize() {
+    this.bounding = this.getBoundingClientRect();
+    this.svg.style.width = `${this.bounding.width}px`;
+    this.svg.style.height = `${this.bounding.height}px`;
+  }
+  setLines() {
+    const { width, height } = this.bounding;
+    this.lines = [];
+    this.paths.forEach((path) => { path.remove(); });
+    this.paths = [];
+    const xGap = 15, yGap = 40;
+    const oWidth = width + 200, oHeight = height + 30;
+    const totalLines = Math.ceil(oWidth / xGap), totalPoints = Math.ceil(oHeight / yGap);
+    const xStart = (width - xGap * totalLines) / 2, yStart = (height - yGap * totalPoints) / 2;
+    for (let i = 0; i <= totalLines; i++) {
+      const points = [];
+      for (let j = 0; j <= totalPoints; j++) {
+        points.push({ x: xStart + xGap * i, y: yStart + yGap * j, wave: { x: 0, y: 0 }, cursor: { x: 0, y: 0, vx: 0, vy: 0 } });
+      }
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.classList.add('a__line', 'js-line');
+      this.svg.appendChild(path);
+      this.paths.push(path);
+      this.lines.push(points);
+    }
+  }
+  movePoints(time) {
+    const { lines, mouse, noise } = this;
+    lines.forEach((points) => {
+      points.forEach((p) => {
+        const move = noise.perlin2((p.x + time * 0.0125) * 0.002, (p.y + time * 0.005) * 0.0015) * 12;
+        p.wave.x = Math.cos(move) * 32; p.wave.y = Math.sin(move) * 16;
+        const dx = p.x - mouse.sx, dy = p.y - mouse.sy, d = Math.hypot(dx, dy), l = Math.max(175, mouse.vs);
+        if (d < l) {
+          const s = 1 - d / l, f = Math.cos(d * 0.001) * s;
+          p.cursor.vx += Math.cos(mouse.a) * f * l * mouse.vs * 0.00065;
+          p.cursor.vy += Math.sin(mouse.a) * f * l * mouse.vs * 0.00065;
+        }
+        p.cursor.vx += (0 - p.cursor.x) * 0.005; p.cursor.vy += (0 - p.cursor.y) * 0.005;
+        p.cursor.vx *= 0.925; p.cursor.vy *= 0.925;
+        p.cursor.x += p.cursor.vx * 2; p.cursor.y += p.cursor.vy * 2;
+        p.cursor.x = Math.min(100, Math.max(-100, p.cursor.x));
+        p.cursor.y = Math.min(100, Math.max(-100, p.cursor.y));
+      });
+    });
+  }
+  moved(point, withCursorForce = true) {
+    const coords = {
+      x: point.x + point.wave.x + (withCursorForce ? point.cursor.x : 0),
+      y: point.y + point.wave.y + (withCursorForce ? point.cursor.y : 0)
+    };
+    coords.x = Math.round(coords.x * 10) / 10; coords.y = Math.round(coords.y * 10) / 10;
+    return coords;
+  }
+  drawLines() {
+    const { lines, moved, paths } = this;
+    lines.forEach((points, lIndex) => {
+      let p1 = moved(points[0], false), d = `M ${p1.x} ${p1.y}`;
+      points.forEach((p1, pIndex) => {
+        const isLast = pIndex === points.length - 1;
+        p1 = moved(p1, !isLast);
+        d += `L ${p1.x} ${p1.y}`;
+      });
+      paths[lIndex].setAttribute('d', d);
+    });
+  }
+  tick(time) {
+    const { mouse } = this;
+    mouse.sx += (mouse.x - mouse.sx) * 0.1; mouse.sy += (mouse.y - mouse.sy) * 0.1;
+    const dx = mouse.x - mouse.lx, dy = mouse.y - mouse.ly, d = Math.hypot(dx, dy);
+    mouse.v = d; mouse.vs += (d - mouse.vs) * 0.1; mouse.vs = Math.min(100, mouse.vs);
+    mouse.lx = mouse.x; mouse.ly = mouse.y; mouse.a = Math.atan2(dy, dx);
+    this.style.setProperty('--x', `${mouse.sx}px`); this.style.setProperty('--y', `${mouse.sy}px`);
+    this.movePoints(time); this.drawLines();
+    requestAnimationFrame(this.tick.bind(this));
+  }
+}
+customElements.define('a-waves', AWaves);
+
+</script></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Kinoko工作室</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div></div></nav><div id="page-site-info"><h1 id="site-title">2024</h1></div></header><main class="layout" id="content-inner"><div id="archive"><div class="article-sort-title">All Articles - 15</div><div class="article-sort"><div class="article-sort-item year">2024</div><div class="article-sort-item"><a class="article-sort-item-img" href="/2024/07/10/ACGN%E6%97%A5%E6%9C%AC%E6%AC%A1%E6%96%87%E5%8C%96%E7%A0%94%E7%A9%B6%E7%A4%BE-%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E6%B0%B8%E4%B8%8D%E5%81%9C%E6%AD%A2%E7%9A%84%E6%97%85%E9%80%94-%E7%AC%AC0~1%E7%AB%A0/" title="ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途-上學期"><div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-07-10T10:17:58.000Z" title="Created 2024-07-10 18:17:58">2024-07-10</time></div><a class="article-sort-item-title" href="/2024/07/10/ACGN%E6%97%A5%E6%9C%AC%E6%AC%A1%E6%96%87%E5%8C%96%E7%A0%94%E7%A9%B6%E7%A4%BE-%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E6%B0%B8%E4%B8%8D%E5%81%9C%E6%AD%A2%E7%9A%84%E6%97%85%E9%80%94-%E7%AC%AC0~1%E7%AB%A0/" title="ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途-上學期">ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途-上學期</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2024/07/02/Onshape-%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B%E7%9A%84%E4%BD%BF%E7%94%A8%E6%97%A5%E8%AA%8C/" title="Onshape-從零開始的使用日誌"><div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-07-02T06:16:25.000Z" title="Created 2024-07-02 14:16:25">2024-07-02</time></div><a class="article-sort-item-title" href="/2024/07/02/Onshape-%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B%E7%9A%84%E4%BD%BF%E7%94%A8%E6%97%A5%E8%AA%8C/" title="Onshape-從零開始的使用日誌">Onshape-從零開始的使用日誌</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2024/06/23/ACGN%E6%97%A5%E6%9C%AC%E6%AC%A1%E6%96%87%E5%8C%96%E7%A0%94%E7%A9%B6%E7%A4%BE-%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E6%B0%B8%E4%B8%8D%E5%81%9C%E6%AD%A2%E7%9A%84%E6%97%85%E9%80%94/" title="ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途"><div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-06-23T13:37:44.000Z" title="Created 2024-06-23 21:37:44">2024-06-23</time></div><a class="article-sort-item-title" href="/2024/06/23/ACGN%E6%97%A5%E6%9C%AC%E6%AC%A1%E6%96%87%E5%8C%96%E7%A0%94%E7%A9%B6%E7%A4%BE-%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E6%B0%B8%E4%B8%8D%E5%81%9C%E6%AD%A2%E7%9A%84%E6%97%85%E9%80%94/" title="ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途">ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2024/06/23/MindAR%E7%B0%A1%E7%95%A5%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F%E8%88%87%E5%BF%83%E5%BE%97/" title="MindAR簡略使用方式與心得"><div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-06-23T13:35:07.000Z" title="Created 2024-06-23 21:35:07">2024-06-23</time></div><a class="article-sort-item-title" href="/2024/06/23/MindAR%E7%B0%A1%E7%95%A5%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F%E8%88%87%E5%BF%83%E5%BE%97/" title="MindAR簡略使用方式與心得">MindAR簡略使用方式與心得</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2024/06/23/Kinoko%E7%9A%84%E9%81%94%E7%88%BE%E6%96%87%E7%95%B0%E9%A3%9F%E4%BF%B1%E6%A8%82%E9%83%A8%E5%85%B6%E4%BA%8C-%E8%A5%BF%E8%8E%8E%E7%8B%97%E9%A3%BC%E6%96%99%E6%B2%99%E6%9C%97%E7%89%9B%E6%8E%92%E7%AF%87/" title="Kinoko的達爾文異食俱樂部其二-西莎狗飼料沙朗牛排篇"><div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-06-23T13:34:27.000Z" title="Created 2024-06-23 21:34:27">2024-06-23</time></div><a class="article-sort-item-title" href="/2024/06/23/Kinoko%E7%9A%84%E9%81%94%E7%88%BE%E6%96%87%E7%95%B0%E9%A3%9F%E4%BF%B1%E6%A8%82%E9%83%A8%E5%85%B6%E4%BA%8C-%E8%A5%BF%E8%8E%8E%E7%8B%97%E9%A3%BC%E6%96%99%E6%B2%99%E6%9C%97%E7%89%9B%E6%8E%92%E7%AF%87/" title="Kinoko的達爾文異食俱樂部其二-西莎狗飼料沙朗牛排篇">Kinoko的達爾文異食俱樂部其二-西莎狗飼料沙朗牛排篇</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2024/04/10/Kinoko%E7%9A%84%E9%81%94%E7%88%BE%E6%96%87%E7%95%B0%E9%A3%9F%E4%BF%B1%E6%A8%82%E9%83%A8/" title="Kinoko的達爾文異食俱樂部其一-10元魚飼料"><div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-04-10T14:53:39.000Z" title="Created 2024-04-10 22:53:39">2024-04-10</time></div><a class="article-sort-item-title" href="/2024/04/10/Kinoko%E7%9A%84%E9%81%94%E7%88%BE%E6%96%87%E7%95%B0%E9%A3%9F%E4%BF%B1%E6%A8%82%E9%83%A8/" title="Kinoko的達爾文異食俱樂部其一-10元魚飼料">Kinoko的達爾文異食俱樂部其一-10元魚飼料</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2024/04/09/%E9%AB%98%E4%B8%AD%E7%89%A9%E7%90%86%E7%AD%86%E8%A8%98-8-%E5%8A%9F%E8%88%87%E5%8A%9B%E5%AD%B8%E8%83%BD/" title="高中物理筆記-8-功與力學能"><div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-04-09T14:31:04.000Z" title="Created 2024-04-09 22:31:04">2024-04-09</time></div><a class="article-sort-item-title" href="/2024/04/09/%E9%AB%98%E4%B8%AD%E7%89%A9%E7%90%86%E7%AD%86%E8%A8%98-8-%E5%8A%9F%E8%88%87%E5%8A%9B%E5%AD%B8%E8%83%BD/" title="高中物理筆記-8-功與力學能">高中物理筆記-8-功與力學能</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2024/04/06/%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E7%AD%86%E8%A8%98-12-%E7%A9%BA%E9%96%93%E5%90%91%E9%87%8F/" title="高中數學筆記-12-空間向量"><div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-04-06T03:31:35.000Z" title="Created 2024-04-06 11:31:35">2024-04-06</time></div><a class="article-sort-item-title" href="/2024/04/06/%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E7%AD%86%E8%A8%98-12-%E7%A9%BA%E9%96%93%E5%90%91%E9%87%8F/" title="高中數學筆記-12-空間向量">高中數學筆記-12-空間向量</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2024/04/03/%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E7%AD%86%E8%A8%98-11-%E5%B9%B3%E9%9D%A2%E5%90%91%E9%87%8F/" title="高中數學筆記-11 平面向量"><div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-04-02T16:01:11.000Z" title="Created 2024-04-03 00:01:11">2024-04-03</time></div><a class="article-sort-item-title" href="/2024/04/03/%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E7%AD%86%E8%A8%98-11-%E5%B9%B3%E9%9D%A2%E5%90%91%E9%87%8F/" title="高中數學筆記-11 平面向量">高中數學筆記-11 平面向量</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2024/04/02/%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E7%AD%86%E8%A8%98-8-%E6%8C%87%E6%95%B8%E8%88%87%E5%B0%8D%E6%95%B8/" title="高中數學筆記-8 指數與對數"><div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-04-02T15:59:22.000Z" title="Created 2024-04-02 23:59:22">2024-04-02</time></div><a class="article-sort-item-title" href="/2024/04/02/%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E7%AD%86%E8%A8%98-8-%E6%8C%87%E6%95%B8%E8%88%87%E5%B0%8D%E6%95%B8/" title="高中數學筆記-8 指數與對數">高中數學筆記-8 指數與對數</a></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/archives/2024/page/2/">2</a><a class="extend next" rel="next" href="/archives/2024/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/horse1.gif'" alt="avatar"/></div><div class="author-info-name">Kinoko</div><div class="author-info-description">hi~</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Kinoko1412"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Kinoko1412" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://www.instagram.com/leaf_kinoko/" target="_blank" title="Instagram"><i class="fab fa-instagram" style="color: #E4405F;"></i></a><a class="social-icon" href="https://www.facebook.com/ye.shi.kai.226202/" target="_blank" title="Facebook"><i class="fab fa-facebook" style="color: #1877F2;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/09/13/Unity-class-1/" title="UNity class 1"><div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div></a><div class="content"><a class="title" href="/2025/09/13/Unity-class-1/" title="UNity class 1">UNity class 1</a><time datetime="2025-09-13T08:32:13.000Z" title="Created 2025-09-13 16:32:13">2025-09-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/10/ACGN%E6%97%A5%E6%9C%AC%E6%AC%A1%E6%96%87%E5%8C%96%E7%A0%94%E7%A9%B6%E7%A4%BE-%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E6%B0%B8%E4%B8%8D%E5%81%9C%E6%AD%A2%E7%9A%84%E6%97%85%E9%80%94-%E7%AC%AC0~1%E7%AB%A0/" title="ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途-上學期"><div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div></a><div class="content"><a class="title" href="/2024/07/10/ACGN%E6%97%A5%E6%9C%AC%E6%AC%A1%E6%96%87%E5%8C%96%E7%A0%94%E7%A9%B6%E7%A4%BE-%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E6%B0%B8%E4%B8%8D%E5%81%9C%E6%AD%A2%E7%9A%84%E6%97%85%E9%80%94-%E7%AC%AC0~1%E7%AB%A0/" title="ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途-上學期">ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途-上學期</a><time datetime="2024-07-10T10:17:58.000Z" title="Created 2024-07-10 18:17:58">2024-07-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/02/Onshape-%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B%E7%9A%84%E4%BD%BF%E7%94%A8%E6%97%A5%E8%AA%8C/" title="Onshape-從零開始的使用日誌"><div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div></a><div class="content"><a class="title" href="/2024/07/02/Onshape-%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B%E7%9A%84%E4%BD%BF%E7%94%A8%E6%97%A5%E8%AA%8C/" title="Onshape-從零開始的使用日誌">Onshape-從零開始的使用日誌</a><time datetime="2024-07-02T06:16:25.000Z" title="Created 2024-07-02 14:16:25">2024-07-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/23/ACGN%E6%97%A5%E6%9C%AC%E6%AC%A1%E6%96%87%E5%8C%96%E7%A0%94%E7%A9%B6%E7%A4%BE-%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E6%B0%B8%E4%B8%8D%E5%81%9C%E6%AD%A2%E7%9A%84%E6%97%85%E9%80%94/" title="ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途"><div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div></a><div class="content"><a class="title" href="/2024/06/23/ACGN%E6%97%A5%E6%9C%AC%E6%AC%A1%E6%96%87%E5%8C%96%E7%A0%94%E7%A9%B6%E7%A4%BE-%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E6%B0%B8%E4%B8%8D%E5%81%9C%E6%AD%A2%E7%9A%84%E6%97%85%E9%80%94/" title="ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途">ACGN日本次文化研究社-吟遊詩菇的永不停止的旅途</a><time datetime="2024-06-23T13:37:44.000Z" title="Created 2024-06-23 21:37:44">2024-06-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/23/MindAR%E7%B0%A1%E7%95%A5%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F%E8%88%87%E5%BF%83%E5%BE%97/" title="MindAR簡略使用方式與心得"><div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div></a><div class="content"><a class="title" href="/2024/06/23/MindAR%E7%B0%A1%E7%95%A5%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F%E8%88%87%E5%BF%83%E5%BE%97/" title="MindAR簡略使用方式與心得">MindAR簡略使用方式與心得</a><time datetime="2024-06-23T13:35:07.000Z" title="Created 2024-06-23 21:35:07">2024-06-23</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>Categories</span>
             
           </div>
           <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/magics/"><span class="card-category-list-name">magics</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/math/"><span class="card-category-list-name">math</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/psysics/"><span class="card-category-list-name">psysics</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9B%B8%E8%A9%95/"><span class="card-category-list-name">書評</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%95%B0%E9%A3%9F%E4%BF%B1%E6%A8%82%E9%83%A8/"><span class="card-category-list-name">異食俱樂部</span><span class="card-category-list-count">2</span></a></li>
-          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E9%AD%94%E6%B3%95%E5%AD%B8%E7%BF%92%E6%97%A5%E8%AA%8C-Unity/" style="font-size: 1.1em; color: #999">魔法學習日誌 Unity</a> <a href="/tags/%E5%BB%A2%E8%A9%B1/" style="font-size: 1.1em; color: #999">廢話</a> <a href="/tags/%E9%AB%98%E4%B8%AD%E5%AD%B8%E7%A7%91/" style="font-size: 1.5em; color: #99a9bf">高中學科</a> <a href="/tags/%E7%95%B0%E9%A3%9F%E4%BF%B1%E6%A8%82%E9%83%A8/" style="font-size: 1.23em; color: #999ea6">異食俱樂部</a> <a href="/tags/%E9%A6%99%E8%8F%87%E6%9B%B8%E8%A9%95/" style="font-size: 1.37em; color: #99a4b2">香菇書評</a> <a href="/tags/%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E5%A4%A7%E5%9C%B0%E5%B7%A1%E8%BF%B4/" style="font-size: 1.1em; color: #999">吟遊詩菇的大地巡迴</a> <a href="/tags/%E9%AD%94%E6%B3%95%E5%AD%B8%E7%BF%92%E6%97%A5%E8%AA%8C/" style="font-size: 1.23em; color: #999ea6">魔法學習日誌</a></div></div><div class="card-widget card-archives">
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E5%90%9F%E9%81%8A%E8%A9%A9%E8%8F%87%E7%9A%84%E5%A4%A7%E5%9C%B0%E5%B7%A1%E8%BF%B4/" style="font-size: 1.1em; color: #999">吟遊詩菇的大地巡迴</a> <a href="/tags/%E9%AD%94%E6%B3%95%E5%AD%B8%E7%BF%92%E6%97%A5%E8%AA%8C-Unity/" style="font-size: 1.1em; color: #999">魔法學習日誌 Unity</a> <a href="/tags/%E9%AD%94%E6%B3%95%E5%AD%B8%E7%BF%92%E6%97%A5%E8%AA%8C/" style="font-size: 1.23em; color: #999ea6">魔法學習日誌</a> <a href="/tags/%E7%95%B0%E9%A3%9F%E4%BF%B1%E6%A8%82%E9%83%A8/" style="font-size: 1.23em; color: #999ea6">異食俱樂部</a> <a href="/tags/%E5%BB%A2%E8%A9%B1/" style="font-size: 1.1em; color: #999">廢話</a> <a href="/tags/%E9%AB%98%E4%B8%AD%E5%AD%B8%E7%A7%91/" style="font-size: 1.5em; color: #99a9bf">高中學科</a> <a href="/tags/%E9%A6%99%E8%8F%87%E6%9B%B8%E8%A9%95/" style="font-size: 1.37em; color: #99a4b2">香菇書評</a></div></div><div class="card-widget card-archives">
     <div class="item-headline">
       <i class="fas fa-archive"></i>
       <span>Archives</span>
@@ -276,7 +562,7 @@ css-doodle {--color: @p(#51eaea, #fffde1, #ff9d76, #FB3569);--rule: (:doodle {@g
         </li>
       
     </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">21</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-09-14T11:25:11.512Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By Kinoko</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 6.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly/source/js/main.min.js"></script><script src="/"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">21</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-09-14T13:05:35.046Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By Kinoko</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 6.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly/source/js/main.min.js"></script><script src="/"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
   const runMermaid = ele => {
     window.loadMermaid = true
     const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
@@ -325,7 +611,7 @@ css-doodle {--color: @p(#51eaea, #fffde1, #ff9d76, #FB3569);--rule: (:doodle {@g
 
   btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
   window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
-})()</script></div><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script>(() => {
+})()</script></div><div class="aplayer no-destroy" data-id="8548901212" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script>(() => {
   window.ChatraID = 'WiAiPDMxZMAmhC4As'
   window.Chatra = window.Chatra || function() {
     (window.Chatra.q = window.Chatra.q || []).push(arguments)
@@ -430,4 +716,4 @@ css-doodle {--color: @p(#51eaea, #fffde1, #ff9d76, #FB3569);--rule: (:doodle {@g
         : window.location.href = e.request.responseURL
     }
   })
-})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly/source/js/search/local-search.min.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":100},"mobile":{"show":true,"scale":0.7},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly/source/js/search/local-search.min.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":50,"vOffset":100},"mobile":{"show":true,"scale":0.7},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
